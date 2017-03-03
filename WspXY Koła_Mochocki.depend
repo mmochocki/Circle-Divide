@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1482511771 source:c:\program files (x86)\codeblocks\projekty\wspxy ko³a_mochocki\main.cpp
-	<iostream>
-	<math.h>
-	<allegro.h>
-	<stdio.h>
-	<string>
-
