@@ -99,35 +99,8 @@ void wypiszTab()
 
 }
 
-
-
-
-int main()
-{
-
-
-    pobierzDane();
-    zamienNaStopnie();
-    obliczPromien();
-    wyznaczWspolrzedne();
-    wypiszWspolrzedne();
-    zamienNaPixele();
-    //wypiszTab();
-
-
-    allegro_init();
-    install_keyboard();
-    set_color_depth( 16 );
-    set_gfx_mode( GFX_AUTODETECT_WINDOWED, 800, 600, 0, 0 );
-
-
-    clear_to_color( screen, makecol( 255, 255, 255 ) );
-
-    circle( screen, 400, 300, 250, makecol( 0, 0, 0 ) );
-    //arc( screen, 400, 300, itofix( 64 ), itofix( 100 ), 250, makecol( 255, 0, 0 ) );
-    vline( screen, 400, 0, 900, makecol( 128, 128, 128 ) );
-    hline( screen, 0, 300, 900, makecol( 128, 128, 128 ) );
-    for (int j = 0; j < ileCzesci; j++)
+void wyznaczPunkty(){
+  for (int j = 0; j < ileCzesci; j++)
     {
         pixelTab[j + 1][2] = pixelTab[j + 1][2] * -1;
         circlefill( screen, pixelTab[j + 1][1]+400, pixelTab[j + 1][2]+300, 3, makecol( 0, 0, 0 ) );
@@ -153,8 +126,39 @@ int main()
             textout_ex(screen,font, konwersjaX,pixelTab[j + 1][1]+420,pixelTab[j + 1][2]+300,makecol(0,0,0),-1);
             textout_ex(screen,font, konwersjaY,pixelTab[j + 1][1]+420,pixelTab[j + 1][2]+312,makecol(0,0,0),-1);
         }
-    }
+    }   
+}
 
+
+void rysujOkrag(){
+    circle( screen, 400, 300, 250, makecol( 0, 0, 0 ) );
+    vline( screen, 400, 0, 900, makecol( 128, 128, 128 ) );
+    hline( screen, 0, 300, 900, makecol( 128, 128, 128 ) );   
+}
+
+
+int main()
+{
+
+
+    pobierzDane();
+    zamienNaStopnie();
+    obliczPromien();
+    wyznaczWspolrzedne();
+    wypiszWspolrzedne();
+    zamienNaPixele();
+
+
+    allegro_init();
+    install_keyboard();
+    set_color_depth( 16 );
+    set_gfx_mode( GFX_AUTODETECT_WINDOWED, 800, 600, 0, 0 );
+    clear_to_color( screen, makecol( 255, 255, 255 ) );
+
+    
+    rysujOkrag();
+    wyznaczPunkty();
+    
     release_screen();
     readkey();
     allegro_exit();
