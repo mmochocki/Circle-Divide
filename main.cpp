@@ -28,8 +28,6 @@ void pobierzDane()
     cin >> srednica;
     cout << "Czesci: ";
     cin >> ileCzesci;
-
-    //ileCzesci += 5;
 }
 
 void zamienNaStopnie()
