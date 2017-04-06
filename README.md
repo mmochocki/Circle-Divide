@@ -1,8 +1,7 @@
 'Circle Divide'
 
-Program konsolowy. Jego zadaniem jest znaleźć współrzędne okręgu, które dzielą go na równe części. Wynik przedstawiony jest graficznie z wykorzystaniem biblioteki allegro. 
+Console program. Its task is to find the coordinates of a circle that divide it into equal parts. The result is graphically presented using the Allegro library.
 
-Input: średnica okręgu, ilość części. 
-Output: współrzędne każdego punktu na okręgu.
+Input: circle diameter, number of parts. Output: Coordinates of each point on the circle.
 
-Screen z działania programu: http://i.imgur.com/nX9HPFk.png
+Screen from the program: http://i.imgur.com/nX9HPFk.png
